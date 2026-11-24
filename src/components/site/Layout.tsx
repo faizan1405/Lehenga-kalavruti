@@ -33,7 +33,7 @@ export function Header({ overlay = false }: { overlay?: boolean }) {
         <button className="eyebrow md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? "Close" : "Menu"}
         </button>
-        <Link to="/" className="font-serif text-2xl tracking-[0.35em] md:text-3xl">KALAVRUTI</Link>
+        <Link to="/" className="flex items-center gap-3 font-serif text-2xl tracking-[0.35em] md:text-3xl"><img src="/favicon.png" alt="Kalavruti logo" className="h-8 w-8 rounded-md object-cover shrink-0" /><span>KALAVRUTI</span></Link>
         <nav className="hidden gap-8 md:flex">
           {nav.slice(2).map((n) => (
             <Link key={n.to} to={n.to} className="eyebrow opacity-80 transition-opacity hover:opacity-100">{n.label}</Link>
